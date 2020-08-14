@@ -42,19 +42,16 @@ class LinkedList:
         prev = None
         current = self.head
         while current is not None:
-        # grab the tail and put into a variable
            temp = current.next_node
+           # self.head.next_node [next node]
            current.next_node = prev
+           # self.head.next_node = none (makes the old head the tail)
            prev = current
+           # becomes self.head
            current = temp
+           # current become the next_node after self.head
         self.head = prev
+        #self.head becomes prev which is the next node after self.head
 
         
-        # take the prev element and point it to none
-        # make prev element the new tail
-        # grab the head
-        # point the head to the old tail
-        # make old tail the new head
-        # point old tail to the old head
-        # continue until the old head is now the old tail
-        pass
+      
